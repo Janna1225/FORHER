@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFF5F2; 
+}
+.header-container {
+    background-color: #F7A4A4;
+    padding: 20px;
+    list-style: none;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-container h1 {
+    color: #FFD6D6; 
+}
+.nav-links {
+    display: flex;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+    right: 100px;
+    list-style: none;
+
+}
+.nav-item a{
+    display: block;
+    font-size: 18px;
+    color:#FFD6D6;
+    text-decoration: none;    
+}
+.nav-item a:hover {
+    color: #FF7F50;
+}
+.nav-item {
+    margin: 0 10px;
+}
+.welcome-flex {
+    display: flex;
+    align-items: center;
+    gap: 20em;
+    margin-top: 120px;
+    margin-left: 200px;
+}
+
+.welcome-text {
+    font-size: 30px;
+    max-width: 400px;
+    color: #5C3D46;
+}
+
+.image-scroll {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid #F5BABB;
+    background: #fff;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.image-scroll::-webkit-scrollbar {
+    display: none;
+}
+.birthday-image {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.Letter-container {
+   position: relative;
+   top: 100%;
+}
+.letter {
+    background-color: #FFF5F2;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    background: #F5BABB;
+    border-radius: 4px;
+    opacity: 0.8;
+    animation: confetti-fall 2.5s linear forwards;
+}
+
+.confetti.color1 { background: #F5BABB; }
+.confetti.color2 { background: #FFF5F2; }
+.confetti.color3 { background: #568F87; }
+.confetti.color4 { background: #FF7F50; }
+.confetti.color5 { background: #FFD700; }
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.7;
+    }
+}
+.virtual-cake {
+    margin: 40px auto 0 auto;
+    width: 140px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cake-plate {
+    width: 120px;
+    height: 18px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    z-index: 0;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.cake-body {
+    width: 100px;
+    height: 60px;
+    background: #F5BABB;
+    border-radius: 0 0 40px 40px / 0 0 30px 30px;
+    position: absolute;
+    bottom: 18px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(245,186,187,0.18);
+    border: 2px solid #F5BABB;
+}
+
+.cake-icing {
+    width: 100px;
+    height: 24px;
+    background: #FFF5F2;
+    border-radius: 50px 50px 40px 40px / 30px 30px 20px 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    z-index: 2;
+    border-bottom: 2px solid #FFD700;
+}
+
+.cake-sprinkles .sprinkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    z-index: 3;
+}
+.s1 { background: #FFD700; left: 40px; bottom: 65px; }
+.s2 { background: #FF7F50; left: 60px; bottom: 70px; }
+.s3 { background: #568F87; left: 80px; bottom: 65px; }
+.s4 { background: #F5BABB; left: 55px; bottom: 80px; }
+.s5 { background: #FFF5F2; left: 70px; bottom: 75px; }
+
+.cake-candles {
+    position: absolute;
+    bottom: 84px;
+    left: 38px;
+    display: flex;
+    gap: 12px;
+    z-index: 4;
+}
+
+.cake-candle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.candle-body {
+    width: 8px;
+    height: 28px;
+    background: #568F87;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    border: 1px solid #FFF5F2;
+}
+
+.candle-flame {
+    width: 12px;
+    height: 18px;
+    background: radial-gradient(ellipse at center, #FF7F50 60%, #FFD700 100%);
+    border-radius: 50% 50% 60% 60%;
+    margin-top: -8px;
+    animation: flame-flicker 1s infinite alternate;
+    transition: opacity 0.3s;
+}
+
+.candle-flame.off {
+    opacity: 0;
+}
+
+@keyframes flame-flicker {
+    0% { transform: scaleY(1) scaleX(1); opacity: 1; }
+    100% { transform: scaleY(1.2) scaleX(0.9); opacity: 0.85; }
+}

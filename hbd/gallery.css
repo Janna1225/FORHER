@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFF5F2; 
+}
+.header-container {
+    background-color: #F7A4A4;
+    padding: 20px;
+    list-style: none;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-container h1 {
+    color: #FFD6D6; 
+}
+.nav-links {
+    display: flex;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+    right: 100px;
+    list-style: none;
+
+}
+.nav-item a{
+    display: block;
+    font-size: 18px;
+    color:#FFD6D6;
+    text-decoration: none;    
+}
+.nav-item a:hover {
+    color: #FF7F50;
+}
+.nav-item {
+    margin: 0 10px;
+}
+h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    color: #F5BABB;
+}
+.gallery-container {
+    max-width: 70em;
+    margin: 40px auto;
+    padding: 24px;
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.gallery-image {
+    width: 25em;
+    height: 25em;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #F5BABB;
+    border-radius: 24px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.scrapbook-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 40px 0;
+    background: #FFF5F2;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(245,186,187,0.10);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.scrapbook-scroll::-webkit-scrollbar {
+    height: 12px;
+    background: #F5BABB;
+    border-radius: 6px;
+}
+.scrapbook-scroll::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 6px;
+}
+
+.scrapbook-photo {
+    min-width: 18em;
+    height: 18em;
+    margin: 0;
+    padding: 12px;
+    background: #FFF5F2;
+    border: 3px solid #F5BABB;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(245,186,187,0.18), 0 2px 8px #FFD700;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrapbook-photo:hover {
+    z-index: 2;
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 16px 48px rgba(245,186,187,0.25), 0 4px 16px #FFD700;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(245,186,187,0.12);
+    border: 2px solid #FFD700;
+    transition: box-shadow 0.2s;
+}
+
+/* Scrapbook random rotations */
+.rotate-1 { transform: rotate(-5deg); }
+.rotate-2 { transform: rotate(3deg); }
+.rotate-3 { transform: rotate(-2deg); }
+.rotate-4 { transform: rotate(4deg); }
+.rotate-5 { transform: rotate(-3deg); }
+.rotate-6 { transform: rotate(2deg); }
+.rotate-7 { transform: rotate(-4deg); }
+.rotate-8 { transform: rotate(5deg); }
+.rotate-9 { transform: rotate(-1deg); }
+.rotate-10 { transform: rotate(1deg); }
+.rotate-11 { transform: rotate(-6deg); }
+.rotate-12 { transform: rotate(6deg); }
+.rotate-13 { transform: rotate(0deg); }
+.rotate-14 { transform: rotate(-7deg); }
+.rotate-15 { transform: rotate(7deg); }
+.rotate-16 { transform: rotate(-3deg); }
+.rotate-17 { transform: rotate(4deg); }
+.rotate-18 { transform: rotate(-2deg); }
+.rotate-19 { transform: rotate(3deg); }
+.rotate-20 { transform: rotate(-5deg); }

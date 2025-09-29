@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFF5F2; 
+}
+.header-container {
+    background-color: #F7A4A4;
+    padding: 20px;
+    list-style: none;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-container h1 {
+    color: #FFD6D6; 
+}
+.nav-links {
+    display: flex;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+    right: 100px;
+    list-style: none;
+
+}
+.nav-item a{
+    display: block;
+    font-size: 18px;
+    color:#FFD6D6;
+    text-decoration: none;    
+}
+.nav-item a:hover {
+    color: #FF7F50;
+}
+.nav-item {
+    margin: 0 10px;
+}
+.wish-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.wish-card {
+    background: #FFF7F7;
+    border: 2px solid #E5C9C9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(245, 186, 187, 0.15);
+    padding: 24px 32px;
+    width: 260px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.wish-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 24px rgba(245, 186, 187, 0.25);
+}
+
+.wish-card h3 {
+    color: #5C3D46;
+    margin-bottom: 12px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.wish-card p {
+    color: #5C3D46;
+    font-size: 1.1em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
